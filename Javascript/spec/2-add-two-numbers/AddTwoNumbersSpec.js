@@ -23,11 +23,11 @@ class ListNode {
     }
 }
 
-var addTwoNumbers = function (l1, l2) {
+const addTwoNumbers = function (l1, l2) {
     return add(l1, l2, 0);
 };
 
-var add = (n1, n2, carry) => {
+const add = (n1, n2, carry) => {
     if (n1 == null) {
         return carry ? add(new ListNode(carry), n2, 0) : n2;
     }
