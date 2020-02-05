@@ -3,7 +3,7 @@
  * @param {number} target
  * @return {number[]}
  */
-const twoSum = function(nums, target) {
+const twoSum = function (nums, target) {
     let hashMap = {};
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
@@ -22,7 +22,7 @@ describe("twoSum(nums, target)", () => {
             const nums = [2, 7, 11, 15];
             const target = 9;
             const expectedResult = [0, 1];
-            expect(twoSum(nums, target)).toEqual(expectedResult)
+            expect(twoSum(nums, target)).toEqual(expectedResult);
         });
     });
 });
