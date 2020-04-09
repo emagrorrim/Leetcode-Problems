@@ -21,3 +21,8 @@ public func myPow2(_ x: Double, _ n: Int) -> Double {
     }
     return result
 }
+
+/* 50.Pow
+* myPow(0.00001, 2147483647)
+* myPow(2, 10)
+*/

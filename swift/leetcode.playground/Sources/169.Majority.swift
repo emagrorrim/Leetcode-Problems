@@ -21,3 +21,7 @@ public func majorityElement2(_ nums: [Int]) -> Int {
     }
     return candidate ?? Int.min
 }
+
+/* 169.Majority
+* majorityElement([3, 3, 4])
+*/
