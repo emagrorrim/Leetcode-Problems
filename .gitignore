@@ -59,5 +59,6 @@ fabric.properties
 
 node_modules
 
+### XC Playground
 swift/leetcode.playground/playground.xcworkspace/xcuserdata
-
+swift/leetcode.playground/timeline.xctimeline
