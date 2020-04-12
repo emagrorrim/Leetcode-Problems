@@ -58,3 +58,6 @@ fabric.properties
 .vscode
 
 node_modules
+
+swift/leetcode.playground/playground.xcworkspace/xcuserdata
+
