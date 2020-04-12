@@ -81,13 +81,33 @@ public struct BinaryTree<T: Comparable> {
         (node.right?.value).flatMap { queue.append($0) }
         return queue + breadthFirstTraversal(from: node.left) + breadthFirstTraversal(from: node.right)
     }
+
+    public func inOrderTraversalWithoutRecurse() -> [T] {
+        var result: [T] = []
+        var stack = Stack<Node>()
+        guard let root = root else {
+            return []
+        }
+        var cur: Node? = root
+        while cur != nil || !stack.isEmpty {
+            while cur != nil {
+                cur.flatMap { stack.push($0) }
+                cur = cur?.left
+            }
+            let node = stack.pop()
+            node.flatMap { result.append($0.value) }
+            cur = node?.right
+        }
+        return result
+    }
 }
 
 /*
- let bt = BinaryTree<Int>([2, 5, 21, 3, 6, 9, 12])
+ let bt = BinaryTree<Int>([2, 5, 21, 3, 6, 9, 12, 738])
  bt.inOrderTraversal()
  bt.preOrderTraversal()
  bt.postOrderTraversal()
  bt.depthFirstTraversal()
  bt.breadthFirstTraversal()
+ bt.inOrderTraversalWithoutRecurse()
  */
