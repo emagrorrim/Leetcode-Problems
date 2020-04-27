@@ -12,11 +12,3 @@ func _permute(_ nums: [Int], prefix: [Int]) -> [[Int]] {
         return $0 + _permute(nums.removing(at: $1.offset), prefix: prefix + [$1.element])
     }
 }
-
-private extension Array {
-    func removing(at index: Int) -> Array {
-        var copy = self
-        copy.remove(at: index)
-        return copy
-    }
-}
