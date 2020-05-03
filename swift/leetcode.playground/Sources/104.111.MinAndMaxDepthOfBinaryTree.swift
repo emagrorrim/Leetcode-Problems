@@ -45,8 +45,6 @@ func improvedMinDepthUsingBFS(_ root: TreeNode?) -> Int {
         return 0
     }
     var queue = [root]
-    var minDepth = 0
-    var maxDepth = 0
     var depth = 0
     while queue.count > 0 {
         depth += 1
