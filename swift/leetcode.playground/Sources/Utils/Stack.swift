@@ -1,25 +1,27 @@
 import Foundation
 
 public struct Stack<T> {
-  private var storage: [T] = []
+    private var storage: [T] = []
 
-  public mutating func push(_ val: T) {
-    storage.append(val)
-  }
+    public init() {}
 
-  public mutating func pop() -> T? {
-    guard let last = storage.last else {
-      return nil
+    public mutating func push(_ val: T) {
+        storage.append(val)
     }
-    storage = storage.dropLast()
-    return last
-  }
 
-  public var top: T? {
-    return storage.last
-  }
+    public mutating func pop() -> T? {
+        guard let last = storage.last else {
+            return nil
+        }
+        storage = storage.dropLast()
+        return last
+    }
 
-  public var isEmpty: Bool {
-    return storage.count == 0
-  }
+    public var top: T? {
+        return storage.last
+    }
+
+    public var isEmpty: Bool {
+        return storage.count == 0
+    }
 }
