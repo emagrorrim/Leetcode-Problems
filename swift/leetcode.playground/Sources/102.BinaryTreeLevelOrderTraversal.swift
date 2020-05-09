@@ -18,7 +18,7 @@ import Foundation
  ]
  */
 
-class Solution {
+class BinaryTreeLevelOrderTraversal {
     public class TreeNode {
         public var val: Int
         public var left: TreeNode?
